@@ -43,8 +43,8 @@ setup(
     description="Ros Configurator",
     long_description=long_description,
     url="https://github.com/micheleantonazzi/ros_configurator",
-    author="micheleantonazzi@gmail.com",
-    author_email="micheleantonazzi",
+    author="Michele Antonazzi",
+    author_email="micheleantonazzi@gmail.com",
     # Choose your license
     license='MIT',
     include_package_data=True,
