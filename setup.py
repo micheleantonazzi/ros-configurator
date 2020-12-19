@@ -42,6 +42,7 @@ setup(
     version=__version__,
     description="Ros Configurator",
     long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/micheleantonazzi/ros_configurator",
     author="Michele Antonazzi",
     author_email="micheleantonazzi@gmail.com",
@@ -56,10 +57,20 @@ setup(
     packages=find_packages(exclude=['contrib', 'docs', 'tests*']),
     tests_require=test_deps,
     # Add here the package dependencies
-    install_requires=[],
+    install_requires=[
+        "pathlib",
+        "sockets",
+        "termcolor",
+        "regex"
+    ],
     entry_points={
         'console_scripts': [
-            'testspp = ros_configurator.set_ros_ip:testspp',
+            'ros_config_set_ip = ros_configurator.functions:set_ip',
+            'ros_config_set_ip_localhost = ros_configurator.functions:set_ip_localhost',
+            'ros_config_set_ros_master_uri = ros_configurator.functions:set_ros_master_uri',
+            'ros_config_list_source_files = ros_configurator.functions:list_source_files',
+            'ros_config_add_source_file = ros_configurator.functions:add_source_file',
+            'ros_config_remove_source_file = ros_configurator.functions:remove_source_file'
         ],
     },
     extras_require=extras,
