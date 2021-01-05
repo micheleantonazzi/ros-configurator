@@ -1,5 +1,6 @@
 import re
 from pathlib import Path
+import os
 
 configuration_file_name = '.ros_configuration_file'
 ROS_MASTER_URI = 'ROS_MASTER_URI'
@@ -46,6 +47,8 @@ class RosParameters:
         return self._source_config_lines
 
     def add_source_file(self, path: str):
+        if path == '.':
+            path = os.path.join(os.getcwd(), 'devel', 'setup.bash')
         self._source_config_lines.append(path)
 
     def remove_source_file(self, number: int):

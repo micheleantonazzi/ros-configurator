@@ -42,7 +42,7 @@ def list_source_files():
 
 
 def add_source_file():
-    file = input('Insert the file\'s path to source\n')
+    file = input('Insert the file\'s path to source (type \'.\' if you are in a ros workspace)\n')
     ros_parameters = RosParameters()
     ros_parameters.add_source_file(file)
     ros_parameters.write_file()
