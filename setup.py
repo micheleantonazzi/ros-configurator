@@ -73,5 +73,6 @@ setup(
             'ros_config_remove_source_file = ros_configurator.functions:remove_source_file'
         ],
     },
+    test_deps=test_deps,
     extras_require=extras,
 )
