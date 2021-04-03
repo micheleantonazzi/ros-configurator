@@ -1,5 +1,7 @@
 # ros-configurator
 
+![](https://travis-ci.org/micheleantonazzi/ros_configurator.svg?branch=main)
+
 **NB -> tested only on Ubuntu**
 
 This package helps developers to configure their ROS environment.
