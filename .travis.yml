@@ -1,12 +1,20 @@
 language: python
 python:
-  - "3.4"
-  - "3.5"
-  - "3.6"
-  - "3.7"
-  - "3.8"
-  - "3.9"
+- '3.4'
+- '3.5'
+- '3.6'
+- '3.7'
+- '3.8'
+- '3.9'
 install:
-  - pip3 install .
+- pip3 install .
 script:
-  - pytest
+- pytest
+deploy:
+  provider: pypi
+  username: __token__
+  password:
+  secure: NfWfeAdVa/FMn13sIF4OXjlp2+MlT4/wi2TSIToFADUaQfxQYRKMZlGswE+6ccy/j6Aq5ksoKNXytJDNq8tjFHgMG2+TAI0iCmnKJOUdG/8ScbzUO8On2ITZRGmdSZmbBI9utEDkYyFgKD5jAzGYCDX4jadcXtblbpuEp29OFFD5lZbEsuaPQ6nskRNaJcySbuKwSJS2eyPqOcAb96H3th6mEjbzQAJqowiPugOQ6IqkKiEcMN/NJdl2obUtuMrCHx00uAylW4rSFkogYBPE6YAQPp89jbuDMLmbLcsM46Q+53OiNEsVGOzJOOdKKeCo+zEzlL3NndorlH+OZFcbsu57EzLDZiLQNqVaxf8SOmXrWVAEqjLet/iR8Kjk4uNrwWAABob2iYN0UnoaD2T1OSaOOm3i690YV6omFsaN8yyL7wtx5iev8EzdegxHLdDS0/o6vUWxQs6I+4IZk+gxPSNfW7Ho1G2ENyy8BPrwVu5PZyhpK6Ij1eZOsO4hvGFoQaMaxtqbRV6KalAHZ4DKNjf+yB1ao+rE9a9i+fw+TR6DQFExv0GeqxX2cvnrmvCnwM6YTzens4VRxsbOq3B4Dnyd9109XAo4/AVqM77nIRkOdAXKxqCXrmimoAKrmxNlF7wWSh7KHAOy7YEBHqF0h0f72gXqwl6HJdU2qrNEQ8I=
+  on:
+    tags: true
+    branch: master
