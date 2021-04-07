@@ -1,6 +1,6 @@
 # ros-configurator
 [![pypi](https://img.shields.io/pypi/v/ros-configurator.svg)](https://pypi.org/project/ros-configurator/)
-![](https://travis-ci.org/micheleantonazzi/ros_configurator.svg?branch=main)
+![](https://travis-ci.com/micheleantonazzi/ros_configurator.svg?branch=main)
 
 **NB -> tested only on Ubuntu**
 
